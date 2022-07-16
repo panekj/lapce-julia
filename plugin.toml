@@ -1,0 +1,19 @@
+name = "lapce-julia"
+display-name = "Julia"
+description = "Julia for Lapce: powered by LanguageServer.jl"
+version = "0.0.1"
+author = "panekj"
+repository = "panekj/lapce-julia"
+wasm = "lapce-julia.wasm"
+
+[configuration]
+system_lsp = true
+
+[configuration.options.binary]
+args = [
+    "--startup-file=no",
+    "--history-file=no",
+    "--quiet",
+    "-e",
+    "using LanguageServer; runserver()",
+]
