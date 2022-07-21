@@ -8,6 +8,7 @@ wasm = "lapce-julia.wasm"
 
 [configuration]
 system_lsp = true
+enabled = false
 
 [configuration.options.binary]
 args = [
@@ -17,3 +18,6 @@ args = [
     "-e",
     "using LanguageServer; runserver()",
 ]
+[configuration.options.diagnostics]
+enable = true
+enableExperimental = true
